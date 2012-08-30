@@ -261,7 +261,6 @@ sub weekanddaytodate {
      my $day = 24*60*60; ## that many seconds in one day.
      my $week = 7*$day; ## that many seconds in one week.
      my %day2num = qw(lun. 0 mar. 1 mer. 2 jeu. 3 ven. 4 sam. 5 dim. 6);
-     my %mon2num = qw(0 jan 2  feb 3  mar 4  apr 5  may 6 jun 7  jul 8  aug 9  sep 10 oct 11 nov 12 dec);
      my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($epoch + ($curweek - 1) * $week + $day2num{"$curday"} * $day);
      $mon++;
      $year += 1900;
