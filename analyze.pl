@@ -12,6 +12,7 @@ use utf8; # allow for utf8 inside the code.
 # use POSIX qw(locale_h);
 # use locale;
 # use Date::ICal;
+use DateTime;
 
 
 ## Global constant. Some of the keys are useless (anneeaca) or
@@ -221,19 +222,13 @@ sub WhatsThisCourse {
   $output{'heuredefin'} = $endhour;
   # trois types de grilles ont un format différent: "cours" "staff" "student".
   if ($infosgenerale{'quoi'} eq "cours") {
-    $output{'semaines'} = $contenu[0]->as_text;
+    ($output{'semaines'}, $output{'locaux'}) = map { $_->as_text } $contenu[0]->find("td");
     $output{'enseignement'} = $contenu[1]->as_text;
-    $output{'locaux'} = $contenu[2]->as_text;
   }
   elsif ($infosgenerale{'quoi'} eq "staff") {
-    my $table = $contenu[0];
-    $output{'semaines'} = $table->look_down(("_tag","td"),("align","left"))->as_text;
-    $output{'locaux'} = $table->look_down(("_tag","td"),("align","center"))->as_text;
-    $output{'enseignement'} = $table->look_down(("_tag","td"),("align","right"))->as_text;
-    $table = $contenu[1];
-    $output{'mnemonic'} = $table->as_text;
-    $table = $contenu[2];
-    $output{'cours'} = $table->as_text;
+    ($output{'semaines'}, $output{'locaux'}, $output{'enseignement'}) = map { $_->as_text() } $contenu[0]->find("td");
+    $output{'mnemonic'} = $contenu[1]->as_text();
+    $output{'cours'} = $contenu[2]->as_text();
   }
   elsif ($infosgenerale{'quoi'} eq "student") {
     my $table = $contenu[0];
@@ -252,7 +247,17 @@ sub weekanddaytodate {
    # $_[0] = numéro de semaine ; $_[1] = jour (1 = lundi, .., 7 = dimanche)
      my ($curweek, $curday) = @_,
      my $epoch; # first day of week 1, at noon.
-     $epoch = 1316426400; ## computed by hand for 2011 - 2012
+     # $epoch = 1316426400; ## computed by hand for 2011 - 2012
+     $epoch = DateTime->new(
+                          year       => 2012,
+                          month      => 9, # unlike localtime.
+                          day        => 17,
+                          hour       => 12,
+                          minute     => 0,
+                          second     => 0,
+                          time_zone  => 'local',
+                       )->epoch();
+
      my $day = 24*60*60; ## that many seconds in one day.
      my $week = 7*$day; ## that many seconds in one week.
      my %day2num = qw(lun. 0 mar. 1 mer. 2 jeu. 3 ven. 4 sam. 5 dim. 6);
