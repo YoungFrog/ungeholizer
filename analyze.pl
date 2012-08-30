@@ -212,13 +212,14 @@ sub WhatsThisCourse {
   my $hour = shift;
   my $endhour = shift;
   my @contenu = @_; #
-  my %output = map { $_ => undef } @POSSIBLE_KEYS;
+  my %output = map { $_ => undef } @POSSIBLE_KEYS; # initialisé à rien.
   foreach (keys %infosgenerale) {
-    $output{$_} = $infosgenerale{$_} if ($infosgenerale{$_});
+    $output{$_} = $infosgenerale{$_} if ($infosgenerale{$_}); # redondance.
   }
   $output{'jour'} = $day;
   $output{'heure'} = $hour;
   $output{'heuredefin'} = $endhour;
+  # trois types de grilles ont un format différent: "cours" "staff" "student".
   if ($infosgenerale{'quoi'} eq "cours") {
     $output{'semaines'} = $contenu[0]->as_text;
     $output{'enseignement'} = $contenu[1]->as_text;
