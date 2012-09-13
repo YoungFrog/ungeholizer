@@ -102,7 +102,7 @@ sub textmyhash {
 }
 sub orgmyhash {
   my $hash = $_;
-  print sprintf "*** %s %s : %s\n%s\n", $orgmodekeyword, $hash->{"mnemonic"}, $hash->{"locaux"},  $hash->{"timestamp"};
+  print sprintf "*** %s %s : %s (%s)\n%s\n", $orgmodekeyword, $hash->{"mnemonic"}, $hash->{"locaux"}, $hash->{"enseignement"}, $hash->{"timestamp"};
   return 1;
 }
 
