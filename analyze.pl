@@ -331,11 +331,12 @@ sub GetGeneralInfo {
 
       ($tree->find("table"))[8]->as_text =~ / : (\d+(-\d+)?)(, (\d+(-\d+)?))*/;
       $result{'semaines'} = $1 ; # semaines
-      @_ = (($tree->find("table"))[7]->as_text =~ /: ([^,]*, [^,]*)(, ([^,]*, [^,]*))*/);
+      @_ = (($tree->find("table"))[7]->as_text =~ /: ([^,]+, [^,]+)(, ([^,]+, [^,]+))*/);
       {				# Remove $2 from the match.
 	my $temp = shift;
 	shift;
 	unshift @_, ( $temp );
+	@_ = grep defined, @_;
       }
       $result{'titul'} = [ @_ ] ;
     }

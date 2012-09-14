@@ -1,0 +1,67 @@
+<html><head><title>Horaires</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head><body>
+
+<table border="0" width="700" align="center">
+	<tbody><tr>
+		<td align="left"><img src="horaire_anet.php_files/Gehol.jpg"></td>
+		<td><p><font face="arial" size="5">Horaire des cours par année d&#8217;études</font></p></td>
+	</tr>
+</tbody></table>
+<table border="0" align="center"><tbody><tr><td valign="top" width="300">
+
+<form name="REQUESTGRID" method="get" action="horaire_anet.php">
+<table>
+<tbody><tr><td colspan="2" align="center"><p><font style="font-size=12;" face="arial">
+Sélectionnez successivement une faculté, un programme et un groupe.
+Ensuite, choisissez la période souhaitée en sélectionnant dans semaine.
+</font></p>
+<hr></td></tr><tr><td colspan="2"></td></tr>
+<tr><td align="left"><p><font style="font-size=12;" face="arial">Faculté :</font></p></td>
+<td><select name="fac" onchange="javascript:document.REQUESTGRID.submit();" style="font-family:arial;width:650px;font-size=12;">
+
+	<option>--</option>
+<option value="P">Archi</option>\n<option value="C">Droit</option>\n<option value="L">ESP</option>\n<option value="I">FSM</option>\n<option value="D">FSP</option>\n<option value="Y">Hors ULB</option>\n<option value="O">IEE</option>\n<option value="G">Médecine</option>\n<option value="J">Pharma</option>\n<option value="B">Philo</option>\n<option value="H">Polytech</option>\n<option value="E">Psycho</option>\n<option value="S">SBS</option>\n<option value="F" selected="selected">Sciences</option>\n<option value="U">ULB</option>\n
+</select></td></tr>
+
+<tr><td><p><font style="font-size=12;" face="arial">Programme :</font></p></td>
+<td><select name="anet" onchange="javascript:document.REQUESTGRID.submit();" style="font-family:arial;width:650px;font-size=12;">
+
+		<option>--</option>
+	<option value="Agrégation de l'enseignement secondaire supérieur" selected="selected">Agrégation de l'enseignement secondaire supérieur</option>\n<option value="Années préparatoires">Années préparatoires</option>\n<option value="BA1 en sciences">BA1 en sciences</option>\n<option value="BA1 en sciences biologiques">BA1 en sciences biologiques</option>\n<option value="BA1 en sciences chimiques">BA1 en sciences chimiques</option>\n<option value="BA1 en sciences de l'ingénieur, orientation bioingénieur">BA1 en sciences de l'ingénieur, orientation bioingénieur</option>\n<option value="BA1 en sciences géographiques">BA1 en sciences géographiques</option>\n<option value="BA1 en sciences géologiques">BA1 en sciences géologiques</option>\n<option value="BA1 en sciences informatiques">BA1 en sciences informatiques</option>\n<option value="BA1 en sciences mathématiques">BA1 en sciences mathématiques</option>\n<option value="BA1 en sciences physiques">BA1 en sciences physiques</option>\n<option value="BA2 en sciences biologiques">BA2 en sciences biologiques</option>\n<option value="BA2 en sciences chimiques">BA2 en sciences chimiques</option>\n<option value="BA2 en sciences de l'ingénieur, orientation bioingénieur">BA2 en sciences de l'ingénieur, orientation bioingénieur</option>\n<option value="BA2 en sciences géographiques">BA2 en sciences géographiques</option>\n<option value="BA2 en sciences géologiques">BA2 en sciences géologiques</option>\n<option value="BA2 en sciences informatiques">BA2 en sciences informatiques</option>\n<option value="BA2 en sciences mathématiques">BA2 en sciences mathématiques</option>\n<option value="BA2 en sciences physiques">BA2 en sciences physiques</option>\n<option value="BA3 en sciences biologiques">BA3 en sciences biologiques</option>\n<option value="BA3 en sciences chimiques">BA3 en sciences chimiques</option>\n<option value="BA3 en sciences de l'ingénieur, orientation bioingénieur">BA3 en sciences de l'ingénieur, orientation bioingénieur</option>\n<option value="BA3 en sciences géographiques">BA3 en sciences géographiques</option>\n<option value="BA3 en sciences géologiques">BA3 en sciences géologiques</option>\n<option value="BA3 en sciences informatiques">BA3 en sciences informatiques</option>\n<option value="BA3 en sciences mathématiques">BA3 en sciences mathématiques</option>\n<option value="BA3 en sciences physiques">BA3 en sciences physiques</option>\n<option value="Certificats d'aptitude pédagogique appropriée à l'enseignement supérieur">Certificats d'aptitude pédagogique appropriée à l'enseignement supérieur</option>\n<option value="MA1 en biochimie et biologie moléculaire et cellulaire">MA1 en biochimie et biologie moléculaire et cellulaire</option>\n<option value="MA1 en bioinformatique et modélisation">MA1 en bioinformatique et modélisation</option>\n<option value="MA1 en bioingénieur : chimie et bio-industrie">MA1 en bioingénieur : chimie et bio-industrie</option>\n<option value="MA1 en bioingénieur : sciences agronomiques">MA1 en bioingénieur : sciences agronomiques</option>\n<option value="MA1 en bioingénieur : sciences et technologies de l'environnement">MA1 en bioingénieur : sciences et technologies de l'environnement</option>\n<option value="MA1 en biologie des organismes et écologie">MA1 en biologie des organismes et écologie</option>\n<option value="MA1 en en statistique">MA1 en en statistique</option>\n<option value="MA1 en sciences actuarielles">MA1 en sciences actuarielles</option>\n<option value="MA1 en sciences chimiques">MA1 en sciences chimiques</option>\n<option value="MA1 en sciences et gestion de l'environnement">MA1 en sciences et gestion de l'environnement</option>\n<option value="MA1 en sciences et gestion du tourisme">MA1 en sciences et gestion du tourisme</option>\n<option value="MA1 en sciences géographiques">MA1 en sciences géographiques</option>\n<option value="MA1 en sciences géologiques">MA1 en sciences géologiques</option>\n<option value="MA1 en sciences informatiques">MA1 en sciences informatiques</option>\n<option value="MA1 en sciences mathématiques">MA1 en sciences mathématiques</option>\n<option value="MA1 en sciences physiques">MA1 en sciences physiques</option>\n<option value="MA2 en biochimie et biologie moléculaire et cellulaire">MA2 en biochimie et biologie moléculaire et cellulaire</option>\n<option value="MA2 en bioinformatique et modélisation">MA2 en bioinformatique et modélisation</option>\n<option value="MA2 en bioingénieur : chimie et bio-industrie">MA2 en bioingénieur : chimie et bio-industrie</option>\n<option value="MA2 en bioingénieur : sciences agronomiques">MA2 en bioingénieur : sciences agronomiques</option>\n<option value="MA2 en bioingénieur : sciences et technologies de l'environnement">MA2 en bioingénieur : sciences et technologies de l'environnement</option>\n<option value="MA2 en biologie des organismes et écologie">MA2 en biologie des organismes et écologie</option>\n<option value="MA2 en sciences actuarielles">MA2 en sciences actuarielles</option>\n<option value="MA2 en sciences chimiques">MA2 en sciences chimiques</option>\n<option value="MA2 en sciences et gestion de l'environnement">MA2 en sciences et gestion de l'environnement</option>\n<option value="MA2 en sciences et gestion du tourisme">MA2 en sciences et gestion du tourisme</option>\n<option value="MA2 en sciences géographiques">MA2 en sciences géographiques</option>\n<option value="MA2 en sciences géologiques">MA2 en sciences géologiques</option>\n<option value="MA2 en sciences informatiques">MA2 en sciences informatiques</option>\n<option value="MA2 en sciences mathématiques">MA2 en sciences mathématiques</option>\n<option value="MA2 en sciences physiques">MA2 en sciences physiques</option>\n<option value="MA2 en statistique">MA2 en statistique</option>\n<option value="Master 60 - Année unique">Master 60 - Année unique</option>\n
+</select></td></tr>
+
+<tr><td><p><font style="font-size=12;" face="arial">Groupe :</font></p></td><td>
+<select name="group" onchange="javascript:document.REQUESTGRID.submit();" style="font-family:arial;width:650px;font-size=12;">
+		<option selected="selected">--</option>
+	<option value="#SPLUS426E18">Agrégation de l'enseignement secondaire supérieur -  Bioingénieur</option><option value="#SPLUS0FACED">Agrégation de l'enseignement secondaire supérieur - sciences biologiques</option><option value="#SPLUS0FACEE">Agrégation de l'enseignement secondaire supérieur - sciences chimiques</option><option value="#SPLUS0FACEF">Agrégation de l'enseignement secondaire supérieur - sciences géographiques</option><option value="#SPLUS0FACF0">Agrégation de l'enseignement secondaire supérieur - sciences mathématiques</option><option value="#SPLUS0FACF1">Agrégation de l'enseignement secondaire supérieur - Sciences physiques</option>
+</select></td></tr>
+
+<tr><td><p><font style="font-size=12;" face="arial">Semaines :</font></p></td>
+<td><select name="sem" onchange="javascript:document.REQUESTGRID.submit();" style="font-family:arial;width:650px;font-size=12;">
+<option face="arial" value="1-14" selected="selected">[1-14] Premier quadrimestre</option>\n<option face="arial" value="21-36">[21-36] Deuxième quadrimestre</option>\n<option face="arial" value="1-36">[1-36] Premier et deuxième quadrimestre</option>\n<option face="arial" value="1">Semaine 1 : 17/09/2012 - 22/09/2012</option>\n<option face="arial" value="2">Semaine 2 : 24/09/2012 - 29/09/2012</option>\n<option face="arial" value="3">Semaine 3 : 01/10/2012 - 06/10/2012</option>\n<option face="arial" value="4">Semaine 4 : 08/10/2012 - 13/10/2012</option>\n<option face="arial" value="5">Semaine 5 : 15/10/2012 - 20/10/2012</option>\n<option face="arial" value="6">Semaine 6 : 22/10/2012 - 27/10/2012</option>\n<option face="arial" value="7">Semaine 7 : 29/10/2012 - 03/11/2012</option>\n<option face="arial" value="8">Semaine 8 : 05/11/2012 - 10/11/2012</option>\n<option face="arial" value="9">Semaine 9 : 12/11/2012 - 17/11/2012</option>\n<option face="arial" value="10">Semaine 10 : 19/11/2012 - 24/11/2012</option>\n<option face="arial" value="11">Semaine 11 : 26/11/2012 - 01/12/2012</option>\n<option face="arial" value="12">Semaine 12 : 03/12/2012 - 08/12/2012</option>\n<option face="arial" value="13">Semaine 13 : 10/12/2012 - 15/12/2012</option>\n<option face="arial" value="14">Semaine 14 : 17/12/2012 - 22/12/2012</option>\n<option face="arial" value="21">Semaine 21 : 04/02/2013 - 09/02/2013</option>\n<option face="arial" value="22">Semaine 22 : 11/02/2013 - 16/02/2013</option>\n<option face="arial" value="23">Semaine 23 : 18/02/2013 - 23/02/2013</option>\n<option face="arial" value="24">Semaine 24 : 25/02/2013 - 02/03/2013</option>\n<option face="arial" value="25">Semaine 25 : 04/03/2013 - 09/03/2013</option>\n<option face="arial" value="26">Semaine 26 : 11/03/2013 - 16/03/2013</option>\n<option face="arial" value="27">Semaine 27 : 18/03/2013 - 23/03/2013</option>\n<option face="arial" value="28">Semaine 28 : 25/03/2013 - 30/03/2013</option>\n<option face="arial" value="29">Semaine 29 : 01/04/2013 - 06/04/2013</option>\n<option face="arial" value="30">Semaine 30 : 08/04/2013 - 13/04/2013</option>\n<option face="arial" value="31">Semaine 31 : 15/04/2013 - 20/04/2013</option>\n<option face="arial" value="32">Semaine 32 : 22/04/2013 - 27/04/2013</option>\n<option face="arial" value="33">Semaine 33 : 29/04/2013 - 04/05/2013</option>\n<option face="arial" value="34">Semaine 34 : 06/05/2013 - 11/05/2013</option>\n<option face="arial" value="35">Semaine 35 : 13/05/2013 - 18/05/2013</option>\n<option face="arial" value="36">Semaine 36 : 20/05/2013 - 25/05/2013</option>\n
+</select></td></tr>
+<tr><td colspan="2">
+<table>
+<tbody><tr>
+	<td>
+		<table>
+			<tbody><tr><td><p><font style="font-size=12;" face="arial">Chaque plage horaire comprend les informations reprises ci-contre.</font></p></td></tr>
+			<tr><td><p><a target="blank" href="http://www.ulbruxelles.be/ulb/greffe/documents/docs/Semaines20122013.pdf"><font style="font-size=12;" face="arial">Numéros des semaines</font></a></p></td></tr>
+		</tbody></table>
+	</td>
+	<td align="right"><img src="horaire_anet.php_files/explgrille.jpg"></td>
+</tr>
+</tbody></table></td></tr>
+
+<tr style="height:10px"><td colspan="2"></td></tr>
+<tr><td colspan="2" align="center">
+<table style="width:750px;" bgcolor="grey"><tbody><tr style="height:20px"><td align="center">
+<p><font style="font-size=13;" face="arial">
+
+</font></p></td>
+
+<td align="center">
+</td></tr></tbody></table></td></tr>
+</tbody></table></form>
+ </td></tr></tbody></table></body></html>

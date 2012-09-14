@@ -1,0 +1,46 @@
+OPTS = -o
+RUN = perl analyze.pl
+FILES = chim1-g1 chim1-g2 irbi1-g1 irbi1-g2 irbi1-g3 irbi1-g4 math1-eco math1-info math1-phys phys1-g1 phys1-g2 phys1-g3 scie1-ga scie1-gb scie1-gc
+
+WGETTOSTDOUT = wget -O -
+URLFORANET = 'http://164.15.72.157:8080/Reporting/Individual;Student%20Set%20Groups;id;%23$(1)?&template=Ann%E9e%20d%27%E9tude&weeks=1-52&days=1-6&periods=5-33&width=0&height=0'
+URLFORCOURSE = 'http://164.15.72.157:8080/Reporting/Individual;Courses;name;$(1)?&template=Cours&weeks=1-52&days=1-6&periods=5-29&width=0&height=0'
+
+GETURL=$(WGETTOSTDOUT) $(call URLFOR$(1),$(2)) > $@ 2> /dev/null
+GETCURRENTCOURSE=$(call GETURL,COURSE,$(basename $@))
+
+.PHONY: 
+mathf%.htm:
+	$(GETCURRENTCOURSE)
+mathd%.htm:
+	$(GETCURRENTCOURSE)
+chim1-g1.htm: 
+	$(call GETURL,ANET,SPLUS35F0FC)
+chim1-g2.htm:
+irbi1-g1.htm:
+irbi1-g2.htm:
+irbi1-g3.htm:
+irbi1-g4.htm:
+math1-eco.htm:
+	$(call GETURL,ANET,SPLUS35F0F2)
+math1-info.htm:
+	$(call GETURL,ANET,SPLUS35F0F3)
+math1-phys.htm:
+	$(call GETURL,ANET,SPLUS35F0F4)
+phys1-g1.htm:
+	$(call GETURL,ANET,SPLUS35F0FB)
+phys1-g2.htm:
+	$(call GETURL,ANET,SPLUS35F0FC)
+phys1-g3.htm:
+	$(call GETURL,ANET,SPLUS35F0FD)
+scie1-ga.htm:
+scie1-gb.htm:
+scie1-gc.htm:
+irbi2.htm:
+	$(call GETURL,ANET,SPLUS35F0E2)
+
+
+forceall: $(addsufix TARGETS,.htm)
+
+horaires/%.org: %.htm
+	$(RUN) $(OPTS) $< > $@
