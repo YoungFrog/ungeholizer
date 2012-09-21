@@ -1,6 +1,6 @@
 OPTS = -o
 RUN = perl analyze.pl
-FILES = chim1-g1 chim1-g2 irbi1-g1 irbi1-g2 irbi1-g3 irbi1-g4 math1-eco math1-info math1-phys phys1-g1 phys1-g2 phys1-g3 scie1-ga scie1-gb scie1-gc
+FILES = horaires/chim1-g1.org horaires/chim1-g2.org horaires/irbi1-g1.org horaires/irbi1-g2.org horaires/irbi1-g3.org horaires/irbi1-g4.org horaires/math1-eco.org horaires/math1-info.org horaires/math1-phys.org horaires/phys1-g1.org horaires/phys1-g2.org horaires/phys1-g3.org horaires/scie1-ga.org horaires/scie1-gb.org horaires/scie1-gc.org
 
 WGETTOSTDOUT = wget -O -
 URLFORANET = 'http://164.15.72.157:8080/Reporting/Individual;Student%20Set%20Groups;id;%23$(1)?&template=Ann%E9e%20d%27%E9tude&weeks=1-52&days=1-6&periods=5-33&width=0&height=0'
